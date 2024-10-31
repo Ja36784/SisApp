@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR" 
+	xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layoyt"
+	layout:decorate="~{templates.html}">
+<head>
+
+</head>
+<body>
+	<div layout:fragment="conteudo">
+		<div class="container">
+			<h1>Cadastro de Produtos</h1>
+			<a href = "/produto/listagemProd" class="btn btn-warning"> Lista Produtos</a>
+			<form method="post" action="/produto">
+
+				<div class="mb-3">
+					<label class="form-label">Produto</label> <input type="text"
+						class="form-control" name="produto">
+				</div>
+
+				<div class="mb-3">
+					<label class="form-label">Preço</label> <input type="text"
+						class="form-control" name="preco">
+				</div>
+
+				<div class="mb-3">
+					<label class="form-label">Quantidade</label> <input type="number"
+						class="form-control" name="quantidade">
+				</div>
+
+				<div class="mb-3">
+					<label class="form-label">Qtd. Estoque</label> <input type="number"
+						class="form-control" name="qtdEstoque">
+				</div>
+
+
+				<button type="submit" class="btn btn-primary">Cadastrar</button>
+			</form>
+		</div>
+
+
+
+
+
+
+
+	</div>
+</body>
+</html>

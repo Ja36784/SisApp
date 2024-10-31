@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR" 
+	xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layoyt"
+	layout:decorate="~{templates.html}">
+
+<head>
+<title>Lista de Produtos</title>
+
+</head>
+<body>
+	<div layout:fragment="conteudo">
+		<div class="container">
+			<h1>Lista de Produtos</h1>
+			<a href = "/produto" class="btn btn-warning">Novo</a>
+			
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Produto</th>
+						<th>Preco</th>
+						<th>Quantidade</th>
+						<th>Qtd. Estoque</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="produto : ${lista}">
+						<td th:text="${produto.produto}"></td>
+						<td th:text="${produto.preco}"></td>
+						<td th:text="${produto.quantidade}"></td>
+						<td th:text="${produto.qtdEstoque}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
